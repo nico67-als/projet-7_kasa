@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+@mixin tablet {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+
+}
+
+
+@mixin phone {
+    @media (max-width: $breakpoint-phone) {
+        @content;
+    }
+}

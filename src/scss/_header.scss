@@ -1,0 +1,46 @@
+@use './abstracts/variables' as *;
+@use './abstracts/mixin' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        @include tablet {
+            height: 32px;
+        }
+
+        @include phone {
+            height: 24px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        gap: 50px;
+        list-style-type: none;
+        font-size: 24px;
+        font-weight: 500;
+
+        @include tablet {
+            gap: 35px;
+            font-size: 16px;
+        }
+
+        @include phone {
+            gap: 20px;
+            font-size: 12px;
+        }
+
+        &-a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+
+        &-a:hover {
+            text-decoration: underline;
+        }
+    }
+}

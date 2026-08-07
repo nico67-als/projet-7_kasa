@@ -1,0 +1,142 @@
+@use './header.scss';
+@use './footer.scss';
+@use './abstracts/variables' as *;
+@use './abstracts/mixin' as *;
+
+body {
+    margin: 0;
+    padding: 45px 100px;
+    padding-bottom: 210px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    @include tablet {
+        padding: 30px 40px;
+        padding-bottom: 160px;
+    }
+
+    @include phone {
+        padding: 20px;
+        padding-bottom: 160px;
+    }
+}
+
+// Main section
+.a-propos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Banner
+.banner {
+    width: 100%;
+    height: 223px;
+    margin: 50px 0;
+    border-radius: 25px;
+    overflow: hidden;
+
+    @include tablet {
+        height: 180px;
+        margin: 30px 0;
+    }
+
+    @include phone {
+        height: 130px;
+        margin: 20px 0;
+        border-radius: 15px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+// Collapses
+.collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 90%;
+
+    @include phone {
+        max-width: 100%;
+        gap: 8px;
+    }
+}
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+        background: #ff6060;
+        color: white;
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: 700;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 25px;
+        cursor: pointer;
+
+        @include phone {
+            font-size: 14px;
+            padding: 12px 18px;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.2s;
+
+        @include phone {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__content {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 25px;
+        font-size: 14px;
+        line-height: 1.6;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+
+        @include phone {
+            padding: 0 18px;
+            font-size: 13px;
+        }
+    }
+
+    &--open {
+        .collapse__header {
+            border-radius: 15px 15px 0 0;
+        }
+
+        .collapse__icon {
+            transform: rotate(180deg);
+        }
+
+        .collapse__content {
+            max-height: 300px;
+            padding: 20px 25px;
+
+            @include phone {
+                padding: 15px 18px;
+            }
+        }
+    }
+}

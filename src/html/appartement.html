@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appartement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../scss/appartement.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header">
+        <a href="./accueil.html">
+            <img src="../assets/images/logo.png" alt="logo Kasa">
+        </a>
+        <ul class="header__nav">
+            <a href="./accueil.html" class="header__nav-a">
+                <li>Accueil</li>
+            </a>
+            <a href="./a-propos.html" class="header__nav-a">
+                <li>À Propos</li>
+            </a>
+        </ul>
+    </header>
+
+    <main class="appartement">
+        <section class="gallery" data-carousel>
+            <button type="button" class="fa-solid fa-angle-left gallery__arrow gallery__arrow--prev" data-carousel-prev
+                aria-label="Image précédente">
+            </button>
+            <img src="../assets/images/image-source-1.png" alt="Photo du logement" class="gallery__image"
+                data-carousel-image>
+            <button type="button" class="fa-solid fa-angle-right gallery__arrow gallery__arrow--next" data-carousel-next
+                aria-label="Image suivante">
+            </button>
+            <span class="gallery__counter" data-carousel-counter>1/2</span>
+        </section>
+
+        <section class="infos">
+            <div class="infos__main">
+                <h1 class="infos__title">Cozy loft on the Canal Saint-Martin</h1>
+                <p class="infos__location">Paris, Île-de-France</p>
+                <ul class="infos__tags">
+                    <li class="infos__tag">Cozy</li>
+                    <li class="infos__tag">Canal</li>
+                    <li class="infos__tag">Paris 10</li>
+                </ul>
+            </div>
+            <div class="infos__host">
+                <div class="host">
+                    <p class="host__name">Alexandre<br>Dumas</p>
+                    <div class="host__avatar" aria-hidden="true"></div>
+                </div>
+                <ul class="rating" aria-label="Note : 3 sur 5">
+                    <li class="fa-solid fa-star rating__star rating__star--filled"></li>
+                    <li class="fa-solid fa-star rating__star rating__star--filled"></li>
+                    <li class="fa-solid fa-star rating__star rating__star--filled"></li>
+                    <li class="fa-solid fa-star rating__star"></li>
+                    <li class="fa-solid fa-star rating__star"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="collapses">
+            <div class="collapse collapse--open" data-collapse>
+                <button type="button" class="collapse__header" data-collapse-toggle aria-expanded="true">
+                    Description
+                    <i class="fa-solid fa-angle-down collapse__icon" aria-hidden="true"></i>
+                </button>
+                <div class="collapse__content">
+                    <p>Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux
+                        bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement
+                        parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare
+                        de l'est (7 minutes à pied). </p>
+                </div>
+            </div>
+            <div class="collapse collapse--open" data-collapse>
+                <button type="button" class="collapse__header" data-collapse-toggle aria-expanded="true">
+                    Équipements
+                    <i class="fa-solid fa-angle-down collapse__icon" aria-hidden="true"></i>
+                </button>
+                <div class="collapse__content">
+                    <ul class="equipments">
+                        <li class="equipments__item">Climatisation</li>
+                        <li class="equipments__item">Wi-Fi</li>
+                        <li class="equipments__item">Cuisine</li>
+                        <li class="equipments__item">Espace de travail</li>
+                        <li class="equipments__item">Fer à repasser</li>
+                        <li class="equipments__item">Sèche-cheveux</li>
+                        <li class="equipments__item">Cintres</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="../assets/images/white-logo.png" alt="logo Kasa" class="footer__logo">
+        <p class="footer__text">© 2020 Kasa. All rights reserved</p>
+    </footer>
+
+    <script src="./assets/js/collapse.js"></script>
+    <script src="./assets/js/appartement.js"></script>
+</body>
+
+</html>
