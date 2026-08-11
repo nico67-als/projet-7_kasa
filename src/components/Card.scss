@@ -1,0 +1,93 @@
+@use '../scss/abstracts/variables' as *;
+@use '../scss/abstracts/mixin' as *;
+
+body {
+    margin: 0;
+    padding: 45px 100px;
+    padding-bottom: 210px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    @include tablet {
+        padding: 30px 40px;
+        padding-bottom: 160px;
+    }
+
+    @include phone {
+        padding: 20px;
+        padding-bottom: 160px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.presentation {
+    display: flex;
+    margin: 0;
+    background-color: #F6F6F6;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-bottom: 50px;
+
+    @include tablet {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    @include phone {
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+        margin-bottom: 10vh;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        width: 100%;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        @include phone {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: flex-end;
+        background: linear-gradient(rgba(0, 0, 0, 0.30)), var(--cover) center / cover no-repeat;
+        border-radius: 10px;
+        position: relative;
+        aspect-ratio: 6 / 5;
+        padding: 20px;
+        box-sizing: border-box;
+
+        @include phone {
+            aspect-ratio: 3 / 2;
+        }
+
+        &-title {
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+
+            @include phone {
+                font-size: 18px;
+            }
+        }
+    }
+}
