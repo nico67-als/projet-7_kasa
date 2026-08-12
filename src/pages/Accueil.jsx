@@ -13,7 +13,9 @@ const Accueil = () => {
 
     return (
         <>
-            <Banner />
+            <Banner variant="home">
+                <h1 class="hero__title">Chez vous, partout et ailleurs</h1>
+            </Banner>
             <section class="presentation">
                 <div class="presentation__cards">
                     {logements.map(logement => (

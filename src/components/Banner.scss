@@ -1,26 +1,6 @@
 @use '../scss/abstracts/variables' as *;
 @use '../scss/abstracts/mixin' as *;
 
-body {
-    margin: 0;
-    padding: 45px 100px;
-    padding-bottom: 210px;
-    font-family: 'Montserrat', sans-serif;
-    position: relative;
-    min-height: 100vh;
-    box-sizing: border-box;
-
-    @include tablet {
-        padding: 30px 40px;
-        padding-bottom: 160px;
-    }
-
-    @include phone {
-        padding: 20px;
-        padding-bottom: 160px;
-    }
-}
-
 .hero {
     display: flex;
     width: 100%;
@@ -28,7 +8,7 @@ body {
     margin: 50px 0;
     border-radius: 25px;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.60)), url("../assets/images/image-source-1.png") center / cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.60));
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -60,5 +40,13 @@ body {
             font-size: 24px;
             text-align: left;
         }
+    }
+
+    &--home {
+        background: linear-gradient(rgba(0, 0, 0, 0.60)), url("../assets/images/image-source-1.png") center / cover no-repeat;
+    }
+
+    &--about {
+        background: linear-gradient(rgba(0, 0, 0, 0.60)), url("../assets/images/image-source-2.png") center / cover no-repeat;
     }
 }

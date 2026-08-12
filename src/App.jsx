@@ -6,7 +6,7 @@ import APropos from './pages/APropos'
 import NotFound from './pages/NotFound'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import './App.css'
+import './scss/global.scss'
 
 function App() {
   return (

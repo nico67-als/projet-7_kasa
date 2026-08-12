@@ -1,26 +1,6 @@
 @use '../scss/abstracts/variables' as *;
 @use '../scss/abstracts/mixin' as *;
 
-body {
-    margin: 0;
-    padding: 45px 100px;
-    padding-bottom: 210px;
-    font-family: 'Montserrat', sans-serif;
-    position: relative;
-    min-height: 100vh;
-    box-sizing: border-box;
-
-    @include tablet {
-        padding: 30px 40px;
-        padding-bottom: 160px;
-    }
-
-    @include phone {
-        padding: 20px;
-        padding-bottom: 160px;
-    }
-}
-
 .header {    
     display: flex;
     align-items: center;
