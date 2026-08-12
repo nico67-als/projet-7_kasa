@@ -79,10 +79,6 @@
     }
 
     &--open {
-        .collapse__icon:before {
-            content: "\f106";
-        }
-
         .collapse__content {
             max-height: 500px;
             padding: 20px 25px;

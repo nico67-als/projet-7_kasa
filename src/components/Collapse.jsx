@@ -13,7 +13,7 @@ const Collapse = ({ title, children }) => {
         <div className={`collapse ${isOpen ? 'collapse--open' : ''}`}>
             <button type="button" className="collapse__header" aria-expanded={isOpen} onClick={toggle}>
                 {title}
-                <i className="fa-solid fa-angle-down collapse__icon" aria-hidden="true"></i>
+                <i className={`fa-solid fa-angle-${isOpen ? 'up' : 'down'} collapse__icon`} aria-hidden="true"></i>
             </button>
             <div className="collapse__content">
                 {children}

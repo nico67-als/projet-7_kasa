@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import './Banner.scss'
 
-const Banner = () => {
+const Banner = ({ variant, children }) => {
     return (
-        <section class="hero">
-            <h1 class="hero__title">Chez vous, partout et ailleurs</h1>
+        <section class={`hero hero--${variant}`}>
+            {children}
         </section>
     )
 }
