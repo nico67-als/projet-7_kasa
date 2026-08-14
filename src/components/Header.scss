@@ -8,11 +8,11 @@
 
     img {
         @include tablet {
-            height: 32px;
+            height: 55px;
         }
 
         @include phone {
-            height: 24px;
+            height: 46px;
         }
     }
 

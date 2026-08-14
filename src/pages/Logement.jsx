@@ -2,19 +2,29 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Collapse from '../components/Collapse'
 import Gallery from '../components/Gallery'
+import NotFound from '../components/NotFound'
 import './Logement.scss'
 
 const Logement = () => {
     const { id } = useParams()
     const [logement, setLogement] = useState(null)
+    const [notFound, setNotFound] = useState(false)
 
 
     useEffect(() => {
         fetch('/logements.json')
             .then(response => response.json())
-            .then(data => setLogement(data.find(logement => logement.id === id)))
+            .then(data => {
+                const found = data.find(logement => logement.id === id)
+                if (!found) {
+                    setNotFound(true)
+                } else {
+                    setLogement(found)
+                }
+            })
     }, [id])
 
+    if (notFound) return <NotFound />  
     if (!logement) return <div>Chargement ...</div>
 
     const rating = Number(logement.rating)
@@ -49,14 +59,14 @@ const Logement = () => {
             </section>
             <section className="collapses">
                 <Collapse title="Description">
-                        <p>{logement.description}</p>
+                    <p>{logement.description}</p>
                 </Collapse>
                 <Collapse title="Equipements">
-                        <ul className="equipments">
-                            {logement.equipments.map((equipement, index) => (
-                                <li key={index} className="equipments__item">{equipement}</li>
-                            ))}
-                        </ul>
+                    <ul className="equipments">
+                        {logement.equipments.map((equipement, index) => (
+                            <li key={index} className="equipments__item">{equipement}</li>
+                        ))}
+                    </ul>
                 </Collapse>
             </section>
         </main>

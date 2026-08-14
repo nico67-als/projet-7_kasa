@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Accueil from './pages/Accueil'
 import Logement from './pages/Logement'
 import APropos from './pages/APropos'
-import NotFound from './pages/NotFound'
+import NotFound from './components/NotFound'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './scss/global.scss'
@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<Accueil />} />
         <Route path="/logement/:id" element={<Logement />} />
         <Route path="/a-propos" element={<APropos />} />
+        <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

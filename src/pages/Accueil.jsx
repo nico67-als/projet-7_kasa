@@ -8,7 +8,7 @@ const Accueil = () => {
     useEffect(() => {
         fetch('/logements.json')
             .then(response => response.json())
-            .then(data => setLogements(data.slice(0, 6)))
+            .then(data => setLogements(data))
     }, [])
 
     return (

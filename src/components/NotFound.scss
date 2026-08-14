@@ -1,7 +1,5 @@
-@use './header.scss';
-@use './footer.scss';
-@use './abstracts/variables' as *;
-@use './abstracts/mixin' as *;
+@use '../scss/abstracts/variables' as *;
+@use '../scss/abstracts/mixin' as *;
 
 // Error 404
 .error-404 {
