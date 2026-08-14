@@ -14,10 +14,10 @@ const Accueil = () => {
     return (
         <>
             <Banner variant="home">
-                <h1 class="hero__title">Chez vous, partout et ailleurs</h1>
+                <h1 className="hero__title">Chez vous, partout et ailleurs</h1>
             </Banner>
-            <section class="presentation">
-                <div class="presentation__cards">
+            <section className="presentation">
+                <div className="presentation__cards">
                     {logements.map(logement => (
                         <Card key={logement.id} logement={logement} />
                     ))}

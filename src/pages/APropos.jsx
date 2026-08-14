@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 import Banner from '../components/Banner'
 import Collapse from '../components/Collapse'
 
